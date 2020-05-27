@@ -6,7 +6,6 @@
         <artifactId>microservice-cloud-01</artifactId>
         <groupId>com.mengxuegu.springclould</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../microservice-cloud-01/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

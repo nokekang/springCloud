@@ -11,8 +11,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @MapperScan("com.mengxuegu.springcloud.mapper")
 @SpringBootApplication
-//@EnableEurekaClient
-@EnableDiscoveryClient
+@EnableEurekaClient
 public class ProductProvider_8001 {
 
     public static void main(String[] args) {
