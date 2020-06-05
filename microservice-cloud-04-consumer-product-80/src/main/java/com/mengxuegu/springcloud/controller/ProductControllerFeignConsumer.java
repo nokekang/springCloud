@@ -1,6 +1,7 @@
 package com.mengxuegu.springcloud.controller;
 
 import com.mengxuegu.springcloud.entity.Product;
+import com.mengxuegu.springcloud.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,27 +14,29 @@ import java.util.List;
  * @Auther: 梦学谷
  */
 @RestController
-@RequestMapping(value = "/consumer")
-public class ProductController_Consumer {
+@RequestMapping(value = "/feign")
+public class ProductControllerFeignConsumer {
 
-    private static final String REST_URL_PREFIX = "http://microservice-product";
 
     @Autowired
-    private RestTemplate restTemplate;
+    private ProductService productService;
 
     @RequestMapping(value = "/product/add")
     public boolean add(Product product) {
-        return restTemplate.postForObject(REST_URL_PREFIX + "/product/add", product, Boolean.class);
+        boolean add = productService.add(product);
+        return add;
     }
 
     @RequestMapping(value = "/product/get/{id}")
     public Product get(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(REST_URL_PREFIX + "/product/get/" + id, Product.class);
+        Product product = productService.get(id);
+        return product;
     }
 
     @RequestMapping(value = "/product/list")
     public List<Product> list() {
-        return restTemplate.getForObject(REST_URL_PREFIX + "/product/list", List.class);
+        List<Product> list = productService.list();
+        return list;
     }
 
 
