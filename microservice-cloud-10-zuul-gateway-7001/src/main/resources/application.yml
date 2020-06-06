@@ -20,6 +20,10 @@ zuul:
       path: /product_provider/**
       serviceId:  microservice-product  # 对应path 映射的 服务spring.application.name
       stripPrefix: true # 代理转发是否去掉前缀， 如果为true, 则访问 /product/get/**  会转发到/get/**
+    provider-consumer:
+      path: /product_consumer/**
+      serviceId:  microservice-consumer  # 对应path 映射的 服务spring.application.name
+      stripPrefix: true # 代理转发是否去掉前缀， 如果为true, 则访问 /product/get/**  会转发到/get/**
 
 
 
