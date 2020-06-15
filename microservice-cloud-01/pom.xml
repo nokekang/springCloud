@@ -18,6 +18,8 @@
         <module>../microservice-cloud-05-eureka-6001</module>
         <module>../microservice-cloud-05-eureka-6002</module>
         <module>../microservice-cloud-10-zuul-gateway-7001</module>
+        <module>../microservice-cloud-11-config-server-5001</module>
+        <module>../microservice-cloud-12-config-client-8080</module>
     </modules>
 
     <parent>

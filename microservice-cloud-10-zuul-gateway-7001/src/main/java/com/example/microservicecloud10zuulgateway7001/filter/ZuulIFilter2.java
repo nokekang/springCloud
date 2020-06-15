@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 
 @Component
 public class ZuulIFilter2 extends ZuulFilter {
+
     @Override
     public String filterType() {
         return "pre";
