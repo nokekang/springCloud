@@ -39,8 +39,8 @@ public class ProductController {
     @HystrixCommand(fallbackMethod = "hystrixList")
     @RequestMapping(value = "/product/list", method = RequestMethod.GET)
     public List<Product> list() {
-        throw new RuntimeException("模拟报错");
-//        return productService.list();
+//        throw new RuntimeException("模拟报错");
+        return productService.list();
     }
 
     public List<Product> hystrixList() {

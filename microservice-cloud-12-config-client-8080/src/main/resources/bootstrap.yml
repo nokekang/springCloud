@@ -4,4 +4,4 @@ spring:
       name: microservice-config-application
       profile: prod
       label: master
-      uri: http://localhost:5001
+      uri: http://localhost:5001   # 上面的配置就会从 http://localhost:5001/master/microservice-config-application-prod.yml 下拉配置文件作为当前自服务的配置文件

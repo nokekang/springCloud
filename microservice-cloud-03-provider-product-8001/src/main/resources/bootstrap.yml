@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: microservice-eureka6001-application
+      name: microservice-product8001-application
       profile: test
       label: master
       uri: http://localhost:5001
