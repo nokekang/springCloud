@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       name: microservice-product8001-application
-      profile: test
+      profile: dev
       label: master
       uri: http://localhost:5001
